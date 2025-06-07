@@ -11,7 +11,7 @@
 - Отображение изображений, описаний и названий объектов.
 - Удобная навигация между объектами внутри региона.
 - Авторизация администратора (форма входа).
-- Современный графический интерфейс.
+- Современный графический интерфейс (на узбекском языке).
 
 ## Требования
 
@@ -49,7 +49,7 @@
 - Ob’ektlarning rasmlari, tavsifi va nomini ko‘rsatish.
 - Viloyat ichidagi ob’ektlar orasida qulay navigatsiya.
 - Administrator uchun avtorizatsiya (kirish formasi).
-- Zamonaviy grafik interfeys.
+- Zamonaviy grafik interfeys (o'zbek tilida).
 
 ## Talablar
 
