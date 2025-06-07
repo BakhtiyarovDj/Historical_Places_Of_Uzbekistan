@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{663B04B0-535A-42B9-91B0-8B10E01F956E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HistoricalPlacesOfUzb</RootNamespace>
+    <AssemblyName>HistoricalPlacesOfUzb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewPlaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPlaceForm.Designer.cs">
+      <DependentUpon>NewPlaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ImageInfo.cs" />
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="UpdatePlaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePlaceForm.Designer.cs">
+      <DependentUpon>UpdatePlaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Query.cs" />
+    <Compile Include="UzbMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UzbMapForm.Designer.cs">
+      <DependentUpon>UzbMapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EachRegionPlacesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EachRegionPlacesForm.Designer.cs">
+      <DependentUpon>EachRegionPlacesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tools.cs" />
+    <EmbeddedResource Include="NewPlaceForm.resx">
+      <DependentUpon>NewPlaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePlaceForm.resx">
+      <DependentUpon>UpdatePlaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UzbMapForm.resx">
+      <DependentUpon>UzbMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EachRegionPlacesForm.resx">
+      <DependentUpon>EachRegionPlacesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseCreationScript.sql" />
+    <Content Include="developer.txt" />
+    <Content Include="Places.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Places\ahmadbek-hotel-01.jpg" />
+    <Content Include="Places\caption.jpg" />
+    <Content Include="Places\chilpyk-01.jpg" />
+    <Content Include="Places\cistern.jpg" />
+    <Content Include="Places\dakhma-i-shakhon-01.jpg" />
+    <Content Include="Places\dalverzintepa-01.jpg" />
+    <Content Include="Places\Djizak_Saad_vakkas2.jpg" />
+    <Content Include="Places\free-icon-location-10601170.png" />
+    <Content Include="Places\jami-andijan-01.jpg" />
+    <Content Include="Places\kaffal-shashi_01.jpg" />
+    <Content Include="Places\khamza-museum-01.jpg" />
+    <Content Include="Places\Map.jpg" />
+    <Content Include="Places\photo_2024-05-01_01-35-20.jpg" />
+    <Content Include="Places\photo_2024-05-01_01-37-42.jpg" />
+    <Content Include="Places\photo_2024-05-01_01-37-47.jpg" />
+    <Content Include="Places\photo_2024-05-01_02-04-27.jpg" />
+    <Content Include="Places\photo_2024-05-01_02-12-37.jpg" />
+    <Content Include="Places\photo_2024-05-01_02-13-35.jpg" />
+    <Content Include="Places\photo_2024-05-01_02-14-47.jpg" />
+    <Content Include="Places\pir_siddik-01.jpg" />
+    <Content Include="Places\Registan.jpg" />
+    <Content Include="Places\said_ahmad-01.jpg" />
+    <Content Include="Places\sultan-saodat-01.jpg" />
+    <Content Include="Places\thumb_1232_600_480_0_0_auto.jpg" />
+    <Content Include="Places\toprak-kala-01.jpg" />
+    <Content Include="Places\zaamin.jpg" />
+    <Content Include="Places_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Places.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
