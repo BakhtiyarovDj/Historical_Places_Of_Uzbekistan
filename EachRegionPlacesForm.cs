@@ -10,7 +10,7 @@ namespace HistoricalPlacesOfUzb
 {
     public partial class EachRegionPlacesForm : Form
     {
-        Query q = new Query();
+        Query q = new Query();//comment
         DataTable dataTable = null;
         Dictionary<int, ImageInfo> dictionary = null;
         private string region;
